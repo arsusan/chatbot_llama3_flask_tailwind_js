@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI ChatBot</title>
+    <link
+      href="{{ url_for('static', filename='css/style.css') }}"
+      rel="stylesheet"
+    />
+    <style>
+      .chat-box {
+        height: 60vh;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <div class="max-w-3xl mx-auto my-10 p-6 bg-white rounded-lg shadow-md">
+      <div
+        class="chat-box overflow-y-scroll p-3 border border-gray-300 rounded-lg mb-4"
+        id="chat-box"
+      ></div>
+      <div class="input-box flex">
+        <input
+          type="text"
+          id="user-input"
+          class="flex-grow p-3 border border-gray-300 rounded-lg"
+          placeholder="Type a message"
+        />
+        <button
+          onclick="handleConversation()"
+          class="ml-3 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+        >
+          Send
+        </button>
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
+  </body>
+</html>
